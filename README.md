@@ -1,4 +1,25 @@
 
+
+
+Fork 自大佬 [bertsir](https://github.com/bertsir/zBarLibary) 的zBarLibary, 感谢大佬!
+## 主要更新
+### 2020/7/3
+1. 根据自己的需求修改了一下扫描界面的layout布局
+2. 切换到 AndroidX 和 AppCompat
+3. 支持设置扫描框底部描述文字的颜色
+
+<pre>
+QrConfig qrConfig = new QrConfig.Builder()
+    .setDesText("(识别二维码)")//扫描框下文字
+    .setDesTextColor(getResources().getColor(R.color.colorPrimary)) // 颜色资源
+    .setDesTextColor(Color.parseColor("#ffffff"))       // 设置颜色值
+    .build()
+</pre>
+
+以下为大佬原版 REAMD ME
+--------------------------
+
+
 ![](http://tu.bertsir.com/images/2019/06/27/Cool-Sky_meitu_1.jpg)
 
 zbar扫描快，zxing可以生成和识别本地，So,我就把他们结合在了一起，这样二维码识别就更便捷了（包含主要功能，二维码识别生成，条形码识别生成）
