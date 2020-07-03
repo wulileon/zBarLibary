@@ -1,7 +1,5 @@
 package cn.bertsir.zbar;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -18,7 +16,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.RequiresApi;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -32,6 +29,10 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.soundcloud.android.crop.Crop;
 
 import java.io.File;
@@ -43,7 +44,7 @@ import cn.bertsir.zbar.utils.QRUtils;
 import cn.bertsir.zbar.view.ScanView;
 import cn.bertsir.zbar.view.VerticalSeekBar;
 
-public class QRActivity extends Activity implements View.OnClickListener, SensorEventListener {
+public class QRActivity extends AppCompatActivity implements View.OnClickListener, SensorEventListener {
 
     private CameraPreview cp;
     private SoundPool soundPool;
@@ -153,8 +154,8 @@ public class QRActivity extends Activity implements View.OnClickListener, Sensor
         fl_title.setVisibility(options.isShow_title() ? View.VISIBLE : View.GONE);
         iv_flash.setVisibility(options.isShow_light() ? View.VISIBLE : View.GONE);
         iv_album.setVisibility(options.isShow_album() ? View.VISIBLE : View.GONE);
-        tv_des.setVisibility(options.isShow_des() ? View.VISIBLE : View.GONE);
-        vsb_zoom.setVisibility(options.isShow_zoom() ? View.VISIBLE : View.GONE);
+        tv_des.setVisibility(options.isShow_des() ? View.VISIBLE : View.INVISIBLE);
+        vsb_zoom.setVisibility(options.isShow_zoom() ? View.VISIBLE : View.INVISIBLE);
 
         tv_des.setText(options.getDes_text());
         tv_title.setText(options.getTitle_text());

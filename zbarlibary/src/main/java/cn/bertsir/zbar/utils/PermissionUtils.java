@@ -1,6 +1,5 @@
 package cn.bertsir.zbar.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,13 +7,15 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.WindowManager;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -211,7 +212,7 @@ public final class PermissionUtils {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    private boolean rationale(final Activity activity) {
+    private boolean rationale(final AppCompatActivity activity) {
         boolean isRationale = false;
         if (mOnRationaleListener != null) {
             for (String permission : mPermissionsRequest) {
@@ -236,7 +237,7 @@ public final class PermissionUtils {
         return isRationale;
     }
 
-    private void getPermissionsStatus(final Activity activity) {
+    private void getPermissionsStatus(final AppCompatActivity activity) {
         for (String permission : mPermissionsRequest) {
             if (isGranted(permission)) {
                 mPermissionsGranted.add(permission);
@@ -276,14 +277,14 @@ public final class PermissionUtils {
         mThemeCallback = null;
     }
 
-    private void onRequestPermissionsResult(final Activity activity) {
+    private void onRequestPermissionsResult(final AppCompatActivity activity) {
         getPermissionsStatus(activity);
         requestCallback();
     }
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    public static class PermissionActivity extends Activity {
+    public static class PermissionActivity extends AppCompatActivity {
 
         public static void start(final Context context) {
             Intent starter = new Intent(context, PermissionActivity.class);
@@ -362,6 +363,6 @@ public final class PermissionUtils {
     }
 
     public interface ThemeCallback {
-        void onActivityCreate(Activity activity);
+        void onActivityCreate(AppCompatActivity activity);
     }
 }

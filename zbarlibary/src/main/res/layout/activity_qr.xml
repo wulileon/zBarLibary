@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -54,7 +54,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:padding="6dp"
-                android:src="@drawable/scanner_back_img" />
+                app:srcCompat="@drawable/scanner_back_img" />
 
             <TextView
                 android:id="@+id/tv_title"
@@ -98,19 +98,19 @@
             android:id="@+id/iv_flash"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginRight="100dp"
             android:background="@drawable/circle_trans_black"
             android:padding="5dp"
             android:scaleType="centerInside"
-            android:src="@drawable/scanner_light" />
+            app:srcCompat="@drawable/scanner_light" />
 
         <ImageView
             android:id="@+id/iv_album"
             android:layout_width="64dp"
             android:layout_height="64dp"
+            android:layout_marginLeft="100dp"
             android:background="@drawable/circle_trans_black"
             android:padding="5dp"
-            android:src="@drawable/scanner_album" />
+            app:srcCompat="@drawable/scanner_album" />
     </LinearLayout>
 
 
@@ -126,4 +126,4 @@
         app:seekBarRotation="CW270" />
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

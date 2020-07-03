@@ -1,7 +1,7 @@
 package cn.bertsir.zbar;
 
 import android.graphics.Color;
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 
 import java.io.Serializable;
 
@@ -19,8 +19,8 @@ public class QrConfig implements Serializable {
     public static final int LINE_SLOW = 3000;
 
 
-    public  int CORNER_COLOR = Color.parseColor("#ff5f00");
-    public  int LINE_COLOR = Color.parseColor("#ff5f00");
+    public  int CORNER_COLOR = Color.parseColor("#03A9F4");
+    public  int LINE_COLOR = Color.parseColor("#03A9F4");
 
     public  int TITLE_BACKGROUND_COLOR = Color.parseColor("#ff5f00");
     public  int TITLE_TEXT_COLOR = Color.parseColor("#ffffff");

@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -193,8 +193,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setShowTitle(cb_show_title.isChecked())//显示Title
                 .setShowAlbum(cb_show_album.isChecked())//显示从相册选择按钮
                 .setNeedCrop(cb_crop_image.isChecked())//是否从相册选择后裁剪图片
-                .setCornerColor(Color.parseColor("#E42E30"))//设置扫描框颜色
-                .setLineColor(Color.parseColor("#E42E30"))//设置扫描线颜色
+                .setCornerColor(Color.parseColor("#03A9F4"))//设置扫描框颜色
+                .setLineColor(Color.parseColor("#03A9F4"))//设置扫描线颜色
                 .setLineSpeed(QrConfig.LINE_MEDIUM)//设置扫描线速度
                 .setScanType(scan_type)//设置扫码类型（二维码，条形码，全部，自定义，默认为二维码）
                 .setScanViewType(scan_view_type)//设置扫描框类型（二维码还是条形码，默认为二维码）

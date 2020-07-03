@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:src="@drawable/shadow"
+            app:srcCompat="@drawable/shadow"
             android:scaleType="fitXY"
             />
 
@@ -28,7 +28,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/shadow"
+                app:srcCompat="@drawable/shadow"
                 android:layout_weight="1"
                 android:scaleType="fitXY"
                 />
@@ -89,7 +89,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/shadow"
+                app:srcCompat="@drawable/shadow"
                 android:layout_weight="1"
                 android:scaleType="fitXY"
                 />
@@ -102,7 +102,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            android:src="@drawable/shadow"
+            app:srcCompat="@drawable/shadow"
             />
 
 
