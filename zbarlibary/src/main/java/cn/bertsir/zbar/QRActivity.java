@@ -158,6 +158,7 @@ public class QRActivity extends AppCompatActivity implements View.OnClickListene
         vsb_zoom.setVisibility(options.isShow_zoom() ? View.VISIBLE : View.INVISIBLE);
 
         tv_des.setText(options.getDes_text());
+        tv_des.setTextColor(options.des_text_color);
         tv_title.setText(options.getTitle_text());
         fl_title.setBackgroundColor(options.getTITLE_BACKGROUND_COLOR());
         tv_title.setTextColor(options.getTITLE_TEXT_COLOR());

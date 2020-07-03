@@ -1,6 +1,9 @@
 package cn.bertsir.zbar;
 
 import android.graphics.Color;
+import android.os.Build;
+
+import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 
 import java.io.Serializable;
@@ -24,6 +27,8 @@ public class QrConfig implements Serializable {
 
     public  int TITLE_BACKGROUND_COLOR = Color.parseColor("#ff5f00");
     public  int TITLE_TEXT_COLOR = Color.parseColor("#ffffff");
+
+    public int des_text_color = Color.parseColor("#ffffff");
 
     public boolean show_title = true;
     public boolean show_light = true;
@@ -293,6 +298,11 @@ public class QrConfig implements Serializable {
 
         public Builder setDesText(String text){
             watcher.des_text = text;
+            return this;
+        }
+
+        public Builder setDesTextColor(@ColorInt int color) {
+            watcher.des_text_color = color;
             return this;
         }
 
