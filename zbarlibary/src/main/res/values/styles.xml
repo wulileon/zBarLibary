@@ -11,7 +11,7 @@
         <item name="android:windowIsTranslucent">true</item>
     </style>
 
-    <style name="ActivityTranslucent">
+    <style name="ActivityTranslucent" parent="Theme.AppCompat">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowIsTranslucent">true</item>

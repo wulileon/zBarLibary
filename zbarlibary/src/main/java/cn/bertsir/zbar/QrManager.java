@@ -1,9 +1,8 @@
 package cn.bertsir.zbar;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
@@ -38,7 +37,7 @@ public class QrManager {
         return this;
     }
 
-    public void startScan(final AppCompatActivity activity, OnScanResultCallback resultCall){
+    public void startScan(final Activity activity, OnScanResultCallback resultCall){
 
         if (options == null) {
             options = new QrConfig.Builder().create();

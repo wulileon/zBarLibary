@@ -99,7 +99,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:background="@drawable/circle_trans_black"
-            android:padding="5dp"
+            android:padding="12dp"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/scanner_light" />
 
@@ -109,7 +109,7 @@
             android:layout_height="64dp"
             android:layout_marginLeft="100dp"
             android:background="@drawable/circle_trans_black"
-            android:padding="5dp"
+            android:padding="15dp"
             app:srcCompat="@drawable/scanner_album" />
     </LinearLayout>
 
